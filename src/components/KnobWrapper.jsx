@@ -4,12 +4,14 @@ import { KNOB_MAX_RANGE } from "@/constants";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { WrapperVideo } from "./WrapperVideo";
 import { Content } from "./Content";
+import { TonePlayer } from "./TonePlayer";
 
 export const KnobWrapper = () => {
   const knobValue = useMotionValue(0);
 
   return (
     <>
+      <TonePlayer knobValue={knobValue} />
       <WrapperVideo knobValue={knobValue} />
       <Content knobValue={knobValue} />
       <input
