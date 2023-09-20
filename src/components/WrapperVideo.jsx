@@ -1,6 +1,6 @@
 "use client";
 
-import { KNOB_MAX_RANGE } from "@/constants";
+import { KNOB_MAX_RANGE, KNOB_MIN_RANGE } from "@/constants";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 export const WrapperVideo = ({ knobValue }) => {
@@ -16,8 +16,16 @@ export const WrapperVideo = ({ knobValue }) => {
     ["#03fc77", "#a503fc", "#fc03f8", "#fcad03"]
   );
 
-  const opacityVideoOne = useTransform(knobValue, [0, KNOB_MAX_RANGE], [0, 1]);
-  const opacityVideoTwo = useTransform(knobValue, [0, KNOB_MAX_RANGE], [1, 0]);
+  const opacityVideoOne = useTransform(
+    knobValue,
+    [KNOB_MIN_RANGE, KNOB_MAX_RANGE],
+    [0, 1]
+  );
+  const opacityVideoTwo = useTransform(
+    knobValue,
+    [KNOB_MIN_RANGE, KNOB_MAX_RANGE],
+    [1, 0]
+  );
 
   return (
     <div className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
