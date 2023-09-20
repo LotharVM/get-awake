@@ -1,12 +1,9 @@
-import { Background } from "@/components/Background";
-import { WrapperVideo } from "@/components/WrapperVideo";
-import Image from "next/image";
+import { KnobWrapper } from "@/components/KnobWrapper";
 
 export default function Home() {
   return (
     <main className="fixed inset-0">
-      <WrapperVideo />
-      <Background />
+      <KnobWrapper />
     </main>
   );
 }

@@ -3,8 +3,7 @@
 import { KNOB_MAX_RANGE } from "@/constants";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
-export const WrapperVideo = () => {
-  const knobValue = useMotionValue(0);
+export const WrapperVideo = ({ knobValue }) => {
   const filter = useTransform(
     knobValue,
     [0, KNOB_MAX_RANGE],
@@ -18,7 +17,6 @@ export const WrapperVideo = () => {
   );
 
   const opacityVideoOne = useTransform(knobValue, [0, KNOB_MAX_RANGE], [0, 1]);
-
   const opacityVideoTwo = useTransform(knobValue, [0, KNOB_MAX_RANGE], [1, 0]);
 
   return (
@@ -100,16 +98,6 @@ export const WrapperVideo = () => {
           Your browser does not support the video tag.
         </video>
       </motion.div>
-
-      <div className="fixed z-30">
-        <input
-          type="range"
-          min="1"
-          max={KNOB_MAX_RANGE}
-          defaultValue={knobValue.current}
-          onChange={(e) => knobValue.set(e.target.value)}
-        />
-      </div>
     </div>
   );
 };
