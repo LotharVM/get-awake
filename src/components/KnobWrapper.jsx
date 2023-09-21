@@ -17,6 +17,10 @@ export const KnobWrapper = () => {
 
   return (
     <>
+      <img
+        className="fixed top-[7.5vh] z-50 left-[50%] translate-x-[-50%]"
+        src="https://live.awakenings.com/_next/static/media/logo-simple.203e48e9.svg"
+      />
       <TonePlayer knobValue={knobValue} />
       <WrapperVideo knobValue={knobValue} />
       <Content knobValue={knobValue} />
