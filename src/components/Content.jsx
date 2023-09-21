@@ -33,16 +33,16 @@ export const Content = ({ knobValue }) => {
     "
     >
       <motion.div
-        className="fixed flex w-[60vh] justify-center items-center h-[60vh] backdrop-blur-[100px] border border-solid border-[#ffffff03]"
+        className="fixed flex w-[40vh] md:w-[60vh] justify-center items-center h-[40vh] md:h-[60vh] backdrop-blur-[100px] border border-solid border-[#ffffff03]"
         style={{ scale: toForeground, opacity: toVisible }}
       >
-        <h1 className="text-6xl">BY NIGHT</h1>
+        <h1 className="text-2xl md:text-6xl">BY NIGHT</h1>
       </motion.div>
       <motion.div
-        className="fixed flex w-[60vh] justify-center items-center h-[60vh] backdrop-blur-[100px] border border-solid border-[#ffffff03]"
+        className="fixed flex w-[40vh] md:w-[60vh] justify-center items-center h-[40vh] md:h-[60vh] backdrop-blur-[100px] border border-solid border-[#ffffff03]"
         style={{ scale: toBackground, opacity: toHidden }}
       >
-        <h1 className="text-6xl">BY DAY</h1>
+        <h1 className="text-2xl md:text-6xl">BY DAY</h1>
       </motion.div>
     </div>
   );

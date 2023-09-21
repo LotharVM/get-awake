@@ -27,7 +27,7 @@ export const KnobWrapper = () => {
       <SerialConnector knobValue={knobValue} />
 
       <input
-        className="bottom-4 fixed z-40 left-[50%] translate-x-[-50%]"
+        className="bottom-16 md:bottom-4 fixed z-40 left-[50%] translate-x-[-50%]"
         type="range"
         min="1"
         max={KNOB_MAX_RANGE}
