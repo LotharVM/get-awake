@@ -6,14 +6,15 @@ import { WrapperVideo } from "./WrapperVideo";
 import { Content } from "./Content";
 import { TonePlayer } from "./TonePlayer";
 import { SerialConnector } from "./SerialConnector";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const KnobWrapper = () => {
   const knobValue = useMotionValue(0);
+  const [loadAudioPlayer, setLoadAudioPlayer] = useState(false);
 
-  // useEffect(() => {
-  //   knobValue.on("change", (e) => console.log(e));
-  // }, []);
+  useEffect(() => {
+    setLoadAudioPlayer(true);
+  }, []);
 
   return (
     <>
@@ -21,11 +22,10 @@ export const KnobWrapper = () => {
         className="fixed top-[7.5vh] z-50 left-[50%] translate-x-[-50%]"
         src="https://live.awakenings.com/_next/static/media/logo-simple.203e48e9.svg"
       />
-      <TonePlayer knobValue={knobValue} />
+      {loadAudioPlayer && <TonePlayer knobValue={knobValue} />}
       <WrapperVideo knobValue={knobValue} />
       <Content knobValue={knobValue} />
       <SerialConnector knobValue={knobValue} />
-
       <input
         className="bottom-16 md:bottom-4 fixed z-40 left-[50%] translate-x-[-50%]"
         type="range"
