@@ -29,20 +29,20 @@ export const Content = ({ knobValue }) => {
 
   return (
     <div
-      className="flex fixed inset-0 min-h-screen w-full items-center justify-center pointer-events-none z-10
+      className="flex fixed inset-0 min-h-screen w-full items-center justify-center pointer-events-none z-10 text-white
     "
     >
       <motion.div
         className="fixed flex w-[800px] justify-center items-center h-[800px] backdrop-blur-[100px] border border-solid border-[#ffffff03]"
         style={{ scale: toForeground, opacity: toVisible }}
       >
-        <h1 className="text-6xl">By Night</h1>
+        <h1 className="text-6xl">BY NIGHT</h1>
       </motion.div>
       <motion.div
         className="fixed flex w-[800px] justify-center items-center h-[800px] backdrop-blur-[100px] border border-solid border-[#ffffff03]"
         style={{ scale: toBackground, opacity: toHidden }}
       >
-        <h1 className="text-6xl">By Day</h1>
+        <h1 className="text-6xl">BY DAY</h1>
       </motion.div>
     </div>
   );

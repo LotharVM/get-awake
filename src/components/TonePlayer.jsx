@@ -41,13 +41,18 @@ export const TonePlayer = ({ knobValue }) => {
   const speed = useTransform(knobValue, [0, KNOB_MAX_RANGE], [0.9, 1.05]);
 
   useMotionValueEvent(speed, "change", (latest) => {
-    console.log({ latest });
+    // if (playbackRate) {
+    // console.log({ latest });
     player.current.playbackRate = latest;
+    // }
   });
 
   return isStarted ? null : (
-    <button className="fixed z-50 bottom-0" onClick={handleStart}>
-      start
+    <button
+      className="fixed z-50 bottom-4 left-4 text-white font-bold"
+      onClick={handleStart}
+    >
+      PLAY MUSIC
     </button>
   );
 };

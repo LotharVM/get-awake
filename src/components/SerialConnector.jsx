@@ -100,7 +100,7 @@ export const SerialConnector = ({ knobValue }) => {
           // }
           // console.log(Number(val2));
           // value is a Uint8Array.
-          knobValue.set(value.toString());
+          knobValue.set(value[0].toString());
           setPotentiometerPosition(value[0]);
         }
       });
@@ -120,11 +120,11 @@ export const SerialConnector = ({ knobValue }) => {
   };
 
   return (
-    <div className="z-50 fixed bottom-0 left-[20px]">
+    <div className="z-50 fixed bottom-4 right-4 text-white font-bold">
       {!portIsOpen && (
-        <button onClick={startAConnection}>Start a connection</button>
+        <button onClick={startAConnection}>CONNECT DEVICE</button>
       )}
-      {portIsOpen && <button onClick={sendMessage}>Start a connection</button>}
+      {portIsOpen && <button onClick={sendMessage}>CONNECT DEVICE</button>}
     </div>
   );
 };

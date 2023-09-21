@@ -11,9 +11,9 @@ import { useEffect } from "react";
 export const KnobWrapper = () => {
   const knobValue = useMotionValue(0);
 
-  useEffect(() => {
-    knobValue.on("change", (e) => console.log(e));
-  }, []);
+  // useEffect(() => {
+  //   knobValue.on("change", (e) => console.log(e));
+  // }, []);
 
   return (
     <>
