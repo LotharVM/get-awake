@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.mixblend {
+  display: none;
+}
+/* @supports (@scope) {
+  .mixblend {
+    display: block;
+    mix-blend-mode: hue;
+  }
+} */

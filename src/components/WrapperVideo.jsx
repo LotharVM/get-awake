@@ -42,7 +42,7 @@ export const WrapperVideo = ({ knobValue }) => {
       />
 
       <motion.div
-        className="absolute z-20 w-full h-full bg-red-700 mix-blend-hue"
+        className="absolute z-20 w-full h-full bg-red-700 mixblend"
         style={{ filter }}
       />
       {/* TOP */}
@@ -51,12 +51,13 @@ export const WrapperVideo = ({ knobValue }) => {
         style={{ opacity: opacityVideoOne }}
       >
         <video
+          playsInline
           autoPlay
           loop
           muted
           className="w-screen h-screen inset-0 object-cover"
         >
-          <source src="videos/1.mp4" type="video/mp4" />
+          <source src="/videos/1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
@@ -66,12 +67,13 @@ export const WrapperVideo = ({ knobValue }) => {
         style={{ opacity: opacityVideoTwo }}
       >
         <video
+          playsInline
           autoPlay
           loop
           muted
           className="w-screen h-screen inset-0 object-cover"
         >
-          <source src="videos/1.mp4" type="video/mp4" />
+          <source src="/videos/1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
@@ -85,9 +87,10 @@ export const WrapperVideo = ({ knobValue }) => {
           autoPlay
           loop
           muted
+          playsInline
           className="w-screen h-screen inset-0 object-cover"
         >
-          <source src="videos/2.mp4" type="video/mp4" />
+          <source src="/videos/2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
@@ -101,8 +104,9 @@ export const WrapperVideo = ({ knobValue }) => {
           loop
           muted
           className="w-screen h-screen inset-0 object-cover"
+          playsInline
         >
-          <source src="videos/2.mp4" type="video/mp4" />
+          <source src="/videos/2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
